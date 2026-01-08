@@ -1,13 +1,35 @@
-/* General Styles */
+$font-family: Arial, sans-serif;
+
+$color-text: #333;
+$color-footer: #222;
+$color-navbar-logo: #ff7e5f;
+$color-navbar-logo-light: #feb47b;
+$color-card-bg: white;
+$color-features-bg: #f3f3f3;
+$color-paragraph: #666;
+
+$font-h1: 48px;
+$font-h2: 32px;
+$font-p: 18px;
+
+$btn-border-radius: 8px;
+$card-border-radius: 10px;
+
+$box-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+$box-shadow-btn: 0px 5px 15px rgba(255, 126, 95, 0.4);
+
+$btn-gradient: linear-gradient(45deg, $color-navbar-logo, $color-navbar-logo-light);
+
+// General Styles
 body {
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: $font-family;
+  color: $color-text;
   margin: 0;
   padding: 0;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: $font-h2;
 }
 
 /* Navbar */
@@ -16,13 +38,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: $box-shadow-light;
   margin-bottom: 10px;
 
   .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #ff7e5f;
+    color: $color-navbar-logo;
   }
 
   .nav-links {
@@ -38,7 +60,7 @@ h2 {
         font-weight: bold;
 
         &:hover {
-          color: #ff7e5f;
+          color: $color-navbar-logo;
         }
       }
     }
@@ -48,16 +70,16 @@ h2 {
     display: inline-block;
     padding: 15px 30px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: $font-p;
     font-weight: bold;
     color: white;
     text-decoration: none;
     border: none;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    border-radius: $btn-border-radius;
+    background: $btn-gradient;
 
     &:hover {
-      box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
+      box-shadow: $box-shadow-btn;
     }
   }
 }
@@ -73,30 +95,29 @@ h2 {
     width: 50%;
 
     h1 {
-      font-size: 48px;
-      color: #ff7e5f;
+      font-size: $font-h1;
+      color: $color-navbar-logo;
     }
 
     p {
-      font-size: 18px;
+      font-size: $font-p;
     }
 
     .primary-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    cursor: pointer;
-    
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
+      display: inline-block;
+      padding: 15px 30px;
+      cursor: pointer;
+      font-size: $font-p;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: $btn-border-radius;
+      background: $btn-gradient;
 
-    text-decoration: none;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
-    &:hover {
-       box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
-    }
+      &:hover {
+        box-shadow: $box-shadow-btn;
+      }
     }
   }
 
@@ -107,18 +128,18 @@ h2 {
 
 /* Features & Plans Sections */
 .features {
-  background: #f3f3f3;
+  background: $color-features-bg;
 
   .card-list {
     display: flex;
     justify-content: space-between;
 
     .card {
-      background: white;
+      background: $color-card-bg;
       padding: 20px;
       width: 27%;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: $card-border-radius;
+      box-shadow: $box-shadow-light;
     }
   }
 }
@@ -132,37 +153,36 @@ h2 {
     justify-content: space-between;
 
     .card {
-      background: white;
+      background: $color-card-bg;
       padding: 20px;
       width: 27%;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: $card-border-radius;
+      box-shadow: $box-shadow-light;
 
       h3 {
         margin-top: 0;
       }
 
       p {
-        color: #666;
+        color: $color-paragraph;
       }
 
-     .primary-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    cursor: pointer;
-    
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
+      .primary-btn {
+        display: inline-block;
+        padding: 15px 30px;
+        cursor: pointer;
+        font-size: $font-p;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: $btn-border-radius;
+        background: $btn-gradient;
 
-    text-decoration: none;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
-    &:hover {
-       box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
-    }
-    }
+        &:hover {
+          box-shadow: $box-shadow-btn;
+        }
+      }
     }
   }
 }
@@ -171,7 +191,7 @@ h2 {
 .footer {
   text-align: center;
   padding: 20px;
-  background: #222;
+  background: $color-footer;
   color: white;
 }
 
