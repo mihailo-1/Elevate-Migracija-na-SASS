@@ -1,0 +1,52 @@
+$font-main: Arial, sans-serif;
+$color-text: #333;
+$color-primary: #ff7e5f;
+$color-secondary: #feb47b;
+$color-footer: #222;
+$color-card-bg: white;
+$color-card-shadow: rgba(0, 0, 0, 0.1);
+$font-size-h1: 48px;
+$font-size-h2: 32px;
+$font-size-p: 18px;
+$border-radius: 8px;
+
+$breakpoint-extra-small: 576px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 992px;
+$breakpoint-large: 1200px;
+
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: $border-radius;
+  display: inline-block;
+}
+
+@mixin responsive($max-screen-size) {
+  @media (max-width: $max-screen-size) {
+    @content;
+  }
+}
+
+// $font-main: Arial, sans-serif;
+// $font-size-h1: 48px;
+// $font-size-p: 16px;
+
+// $color-primary: #ff7e5f;
+// $color-text: #333;
+// $color-card-bg: #fff;
+// $color-card-shadow: rgba(0, 0, 0, 0.1);
+
+// $breakpoint-medium: 768px;
+// $breakpoint-extra-small: 480px;
+
+// @mixin responsive($max) {
+//   @media (max-width: $max) {
+//     @content;
+//   }
+// }

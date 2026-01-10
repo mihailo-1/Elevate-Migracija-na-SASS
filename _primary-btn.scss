@@ -1,0 +1,8 @@
+@use 'variables' as *;
+.primary-btn {
+  @include button-style($color-primary, white);
+
+  &:hover {
+    box-shadow: 0px 5px 15px rgba(255,126,95,0.4);
+  }
+}
